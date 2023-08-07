@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://fontlibrary.org//face/metropolis"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/3.19.3/inter.css"
+      type="text/css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .addToCart {
+        width: 314px;
+        height: 48px;
+        border-radius: 4px 4px 4px 0px;
+        background-color: #007f61;
+        color: #fff;
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-top: 25px;
+        margin-bottom: 5px;
+      }
+      #copyRight {
+        color: #000;
+        font-family: Inter;
+        font-size: 12px;
+        font-style: italic;
+        font-weight: 300;
+        line-height: normal;
+        margin-left: 180px;
+      }
+      #Shipping {
+        color: #007f61;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        opacity: 0.6;
+      }
+      #total {
+        color: #000;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      #status {
+        color: #000;
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        margin-left: 45px;
+      }
+      #deldata {
+        display: flex;
+        margin-top: 20px;
+      }
+      #thirdBlock {
+        margin-top: 20px;
+        width: 310px;
+        height: 74px;
+        flex-shrink: 0;
+        border-radius: 3.615px;
+        border: 0.904px solid #c8c8c8;
+        background: #fff;
+        display: flex;
+      }
+      #ThirdBtn {
+        width: 14.461px;
+        height: 14.461px;
+        flex-shrink: 0;
+        stroke-width: 0.904px;
+        stroke: #dadada;
+      }
+      #secondBlock {
+        margin-top: 20px;
+        width: 310px;
+        height: 161.781px;
+        border-radius: 3.615px;
+        border: 0.904px solid #007f61;
+        background: #f4fbf9;
+      }
+      #thirddata {
+        color: #000;
+        font-family: Metropolis;
+        font-size: 14.461px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+      }
+      #off {
+        color: #000;
+        font-family: Metropolis;
+        font-size: 14.461px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        text-transform: uppercase;
+      }
+      #offerPercent {
+        color: #000;
+        font-family: Metropolis;
+        font-size: 14.461px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        margin-top: 25px;
+        margin-left: 95px;
+      }
+      svg {
+        margin-top: 30px;
+        margin-left: 20px;
+      }
+      #data {
+        margin-top: 20px;
+        margin-left: 10px;
+      }
+      #firstBlock {
+        margin-top: 5px;
+        width: 310px;
+        height: 74.112px;
+        flex-shrink: 0;
+        border-radius: 3.615px;
+        border: 0.904px solid #c8c8c8;
+        background: #fff;
+        display: flex;
+      }
+      #highLight {
+        margin-top: 20px;
+        width: 77.996px;
+        height: 0.904px;
+        background: #c8c8c8;
+      }
+      .title {
+        margin-top: -3px;
+        color: #007f61;
+        font-family: Metropolis;
+        font-size: 18.076px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        padding: 13px 13px;
+      }
+      .activeBtn {
+        position: absolute;
+      }
+      #strike {
+        color: #000;
+        font-family: Inter;
+        font-size: 9.942px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.3;
+        margin-left: 155px;
+        margin-bottom: 10px;
+        margin-top: -24px;
+      }
+      #aligin {
+        display: flex;
+      }
+      #Popular {
+        color: #007f61;
+        font-family: Inter;
+        font-size: 12.653px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-left: 214px;
+        margin-top: -43px;
+      }
+      #PopularOff {
+        margin-left: 232px;
+      }
+      #offdata {
+        margin-bottom: 10px;
+        margin-top: -30px;
+        margin-left: 48px;
+      }
+      #aligin2 {
+        margin-top: 15px;
+        margin-right: 120px;
+        color: #000;
+        font-family: Inter;
+        font-size: 9.942px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      #sNo {
+        color: #000;
+        font-family: Inter;
+        font-size: 9.038px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: 10px;
+      }
+      #Content {
+        color: #000;
+        font-family: Inter;
+        font-size: 10.846px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-left: 5px;
+      }
+      #align3 {
+        display: flex;
+        margin-left: 30px;
+        margin-top: 5px;
+      }
+      #adjust {
+        margin-right: -25px;
+        margin-left: -5px;
+      }
+      #adjust2 {
+        margin-left: -15px;
+      }
+      #offdata1 {
+        color: #000;
+        font-family: Metropolis;
+        font-size: 14.461px;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+      }
+      #option {
+        width: 65.978px;
+        height: 25.306px;
+        border-radius: 1.808px;
+        border: 0.904px solid #d9d9d9;
+        background: #fff;
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+      .arrow {
+        margin-top: -20px;
+        margin-left: 25px;
+      }
+      .arrow2 {
+        margin-top: -20px;
+        margin-left: 30px;
+      }
+      #sizeData1,
+      #colorData1,
+      #sizeData2,
+      #colorData2 {
+        margin-left: 20px;
+        margin-top: -10px;
+        visibility: hidden;
+      }
+      .firstData {
+        margin-left: 8px;
+        margin-top: -10px;
+      }
+      #option2 {
+        width: 72.304px;
+        height: 25.306px;
+        border-radius: 1.808px;
+        border: 0.904px solid #d9d9d9;
+        background: #fff;
+        margin-left: 5px;
+      }
+      #S:hover,
+      #M:hover,
+      #L:hover,
+      #S1:hover,
+      #M1:hover,
+      #L1:hover {
+        color: #007f61;
+        opacity: 0.5px;
+      }
+      #color2_1:hover,
+      #color2_2:hover,
+      #color1_1:hover,
+      #color1_2:hover {
+        color: #007f61;
+        opacity: 0.5px;
+      }
+
+      @media screen and (min-width: 320px) {
+        #main {
+          margin-left: 5px;
+          margin-top: 0px;
+        }
+      }
+      @media screen and (min-width: 375px) {
+        #main {
+          margin-left: 35px;
+          margin-top: 0px;
+        }
+      }
+      @media screen and (min-width: 425px) {
+        #main {
+          margin-left: 60px;
+          margin-top: 0px;
+        }
+      }
+      @media screen and (min-width: 768px) {
+        #main {
+          margin-left: 230px;
+          margin-top: 40px;
+        }
+      }
+      @media screen and (min-width: 1024px) {
+        #main {
+          margin-left: 350px;
+          margin-top: 60px;
+        }
+      }
+      @media screen and (min-width: 1440px) {
+        #main {
+          margin-left: 580px;
+          margin-top: 60px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="aligin">
+        <div id="highLight"></div>
+        <span class="title">Bundle & Save</span>
+        <div id="highLight"></div>
+      </div>
+
+      <div id="firstBlock">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="15"
+          viewBox="0 0 16 15"
+          fill="none"
+        >
+          <circle
+            cx="7.92151"
+            cy="7.25274"
+            r="6.77852"
+            stroke="#DADADA"
+            stroke-width="0.903803"
+          />
+        </svg>
+        <div id="data">
+          <p>1 Pair<br /><span id="thirddata">DKK 195.00</span></p>
+        </div>
+        <p id="offerPercent">50% <span id="off">off</span></p>
+      </div>
+      <div id="secondBlock">
+        <svg width="16" height="15">
+          <circle
+            id="c1"
+            cx="7.92134"
+            cy="7.29976"
+            r="6.77852"
+            stroke="green"
+            fill="white"
+            style="opacity: 1"
+          />
+          <circle
+            cx="7.92134"
+            cy="7.29976"
+            r="3.77852"
+            stroke="green"
+            fill="green"
+            style="opacity: 1"
+          />
+        </svg>
+        <p id="offdata">2 Pair<br /><span id="offdata1">DKK 345.00</span></p>
+        <div id="strike"><del>DKK 195.00</del></div>
+        <div id="Popular">Most Popular</div>
+        <p id="PopularOff"><span id="offdata1">40%OFF</span></p>
+        <div id="aligin2">
+          <p id="adjust2">Size</p>
+          <p id="adjust">Colour</p>
+        </div>
+        <div id="align3">
+          <div id="sNo">#1</div>
+          <div id="option">
+            <ul style="list-style: none" id="Content">
+              <li class="arrow">
+                <svg
+                  onclick="showTheSizeData1()"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="5"
+                  viewBox="0 0 6 5"
+                  fill="none"
+                >
+                  <path
+                    d="M2.79836 4.7583L0.450207 0.691186L5.14651 0.691187L2.79836 4.7583Z"
+                    fill="black"
+                  />
+                </svg>
+              </li>
+              <li class="firstData" id="showSizeData1" style="text-align: center; margin-right: 9px">
+                Size
+              </li>
+              <div id="sizeData1" style="text-align: center">
+                <li id="S1"onclick="SForData1()">S</li>
+                <li id="M1"onclick="MForData1()">M</li>
+                <li id="L1"onclick="LForData1()">L</li>
+              </div>
+            </ul>
+          </div>
+          <div id="option2">
+            <ul style="list-style: none" id="Content">
+              <li class="arrow2">
+                <svg
+                  onclick="showTheColorData1()"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="5"
+                  viewBox="0 0 6 5"
+                  fill="none"
+                >
+                  <path
+                    d="M2.79836 4.7583L0.450207 0.691186L5.14651 0.691187L2.79836 4.7583Z"
+                    fill="black"
+                  />
+                </svg>
+              </li>
+              <li class="firstData" id="showColorData1">Colour</li>
+              <div id="colorData1">
+                <li id="color1_1" onclick="wSelect()">White</li>
+                <li id="color1_2" onclick="blSelect()">Blue</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <div style="margin-top: 5px" id="align3">
+          <div id="sNo">#2</div>
+        <div id="Support">
+          <div id="option">
+            <ul style="list-style: none" id="Content">
+              <li class="arrow">
+                <svg
+                  onclick="showTheSizeData2()"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="5"
+                  viewBox="0 0 6 5"
+                  fill="none"
+                >
+                  <path
+                    d="M2.79836 4.7583L0.450207 0.691186L5.14651 0.691187L2.79836 4.7583Z"
+                    fill="black"
+                  />
+                </svg>
+              </li>
+                <li
+                  id="showSizeData2"
+                  class="firstData"
+                  style="text-align: center; margin-right: 9px"
+                >
+                  Size
+                </li>
+                <div id="sizeData2" style="text-align: center">
+                  <li id="S"onclick="SForData2()">S</li>
+                  <li id="M"onclick="MForData2()">M</li>
+                  <li id="L"onclick="LForData2()">L</li>
+                </div>
+            </ul>
+          </div>
+        </div>
+        <div id="Support_2">
+          <div id="option2">
+            <ul style="list-style: none" id="Content">
+              <li class="arrow2">
+                <svg
+                  onclick="showTheColorData2()"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="6"
+                  height="5"
+                  viewBox="0 0 6 5"
+                  fill="none"
+                >
+                  <path
+                    d="M2.79836 4.7583L0.450207 0.691186L5.14651 0.691187L2.79836 4.7583Z"
+                    fill="black"
+                  />
+                </svg>
+              </li>
+              <li class="firstData" id="showColorData2">Colour</li>
+              <div id="colorData2">
+                <li id="color2_1" onclick="ySelect()">Yellow</li>
+                <li id="color2_2"onclick="bSelect()">Brown</li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <br>
+      <div id="thirdBlock">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="16"
+          height="15"
+          viewBox="0 0 16 15"
+          fill="none"
+        >
+          <circle
+            cx="7.92151"
+            cy="7.25274"
+            r="6.77852"
+            stroke="#DADADA"
+            stroke-width="0.903803"
+          />
+        </svg>
+        <div id="data">
+          <p>3 Pair<br /><span id="thirddata">DKK 528.00</span></p>
+        </div>
+        <p id="offerPercent">60% <span id="off">off</span></p>
+      </div>
+      <div id="deldata">
+        <p for="" id="Shipping">Free 2 Day Shipping</p>
+        <p id="status"><span id="total">Total : </span>DKK 360.00</p>
+      </div>
+      <input type="button" value="+ Add to cart" class="addToCart" /><br />
+      <label for="" id="copyRight"
+        ><i class="fa-regular fa-copyright"></i> Powered by Pumper</label
+      >
+    </div>
+  </body>
+  <script>
+    var firstLoad = true;
+    function showTheSizeData1() {
+      var sizeData = document.getElementById("sizeData1");
+      var sizeSData = document.getElementById("S1");
+      var sizeMData = document.getElementById("M1");
+      var sizeLData = document.getElementById("L1");
+      var hideTheSupport = document.getElementById("Support");
+      if (firstLoad) {
+        hideTheSupport.style.visibility = "hidden";
+        sizeData.style.visibility = "visible";
+        sizeSData.style.marginTop = "15px";
+        sizeSData.style.marginLeft = "-25px";
+        sizeSData.style.padding = "9px";
+        sizeSData.style.width = "47.978px";
+        sizeSData.style.height = "1px";
+        sizeSData.style.borderRadius = "1.808px";
+        sizeSData.style.border = "0.904px solid #d9d9d9";
+        sizeSData.style.background = "#fff";
+        sizeMData.style.marginLeft = "-25px";
+        sizeMData.style.padding = "9px";
+        sizeMData.style.width = "47.978px";
+        sizeMData.style.height = "1px";
+        sizeMData.style.borderRadius = "1.808px";
+        sizeMData.style.border = "0.904px solid #d9d9d9";
+        sizeMData.style.background = "#fff";
+        sizeLData.style.marginLeft = "-25px";
+        sizeLData.style.padding = "10px";
+        sizeLData.style.width = "47px";
+        sizeLData.style.height = "1px";
+        sizeLData.style.borderRadius = "1.808px";
+        sizeLData.style.border = "0.904px solid #d9d9d9";
+        sizeLData.style.background = "#fff";
+        firstLoad = false;
+      } else {
+        firstLoad = true;
+        sizeData.style.visibility = "hidden";
+        hideTheSupport.style.visibility = "visible";
+
+      }
+    }
+    function showTheColorData1() {
+      var colorData = document.getElementById("colorData1");
+      var color1_1 = document.getElementById("color1_1");
+      var color1_2 = document.getElementById("color1_2");
+      var hideTheSupport = document.getElementById("Support_2");
+      if (firstLoad) {
+        colorData.style.visibility = "visible";
+        hideTheSupport.style.visibility = "hidden";
+        color1_1.style.marginTop = "15px";
+        color1_1.style.marginLeft = "-25px";
+        color1_1.style.padding = "12px";
+        color1_1.style.width = "47px";
+        color1_1.style.height = "1.306px";
+        color1_1.style.borderRadius = "1.808px";
+        color1_1.style.border = "0.904px solid #d9d9d9";
+        color1_1.style.background = "#fff";
+        color1_2.style.marginLeft = "-25px";
+        color1_2.style.padding = "12px";
+        color1_2.style.width = "47px";
+        color1_2.style.height = "1.306px";
+        color1_2.style.borderRadius = "1.808px";
+        color1_2.style.border = "0.904px solid #d9d9d9";
+        color1_2.style.background = "#fff";
+        firstLoad = false;
+      } else {
+        firstLoad = true;
+        hideTheSupport.style.visibility = "visible";
+        colorData.style.visibility = "hidden";
+      }
+    }
+    function showTheSizeData2() {
+      var sizeData = document.getElementById("sizeData2");
+      var sizeSData = document.getElementById("S");
+      var sizeMData = document.getElementById("M");
+      var sizeLData = document.getElementById("L");
+      if (firstLoad) {
+        sizeData.style.visibility = "visible";
+        sizeSData.style.marginTop = "15px";
+        sizeSData.style.marginLeft = "-25px";
+        sizeSData.style.padding = "9px";
+        sizeSData.style.width = "47.978px";
+        sizeSData.style.height = "1px";
+        sizeSData.style.borderRadius = "1.808px";
+        sizeSData.style.border = "0.904px solid #d9d9d9";
+        sizeSData.style.background = "#fff";
+        sizeMData.style.marginLeft = "-25px";
+        sizeMData.style.padding = "9px";
+        sizeMData.style.width = "47.978px";
+        sizeMData.style.height = "1px";
+        sizeMData.style.borderRadius = "1.808px";
+        sizeMData.style.border = "0.904px solid #d9d9d9";
+        sizeMData.style.background = "#fff";
+        sizeLData.style.marginLeft = "-25px";
+        sizeLData.style.padding = "9px";
+        sizeLData.style.width = "48px";
+        sizeLData.style.height = "1px";
+        sizeLData.style.borderRadius = "1.808px";
+        sizeLData.style.border = "0.904px solid #d9d9d9";
+        firstLoad = false;
+      } else {
+        firstLoad = true;
+        sizeData.style.visibility = "hidden";
+      }
+    }
+    function showTheColorData2() {
+      var colorData = document.getElementById("colorData2");
+      var color2_1 = document.getElementById("color2_1");
+      var color2_2 = document.getElementById("color2_2");
+      if (firstLoad) {
+        colorData.style.visibility = "visible";
+        color2_1.style.marginTop = "15px";
+        color2_1.style.marginLeft = "-25px";
+        color2_1.style.padding = "12px";
+        color2_1.style.width = "47px";
+        color2_1.style.height = "1.306px";
+        color2_1.style.borderRadius = "1.808px";
+        color2_1.style.border = "0.904px solid #d9d9d9";
+        color2_1.style.background = "#fff";
+        color2_2.style.marginLeft = "-25px";
+        color2_2.style.padding = "12px";
+        color2_2.style.width = "47px";
+        color2_2.style.height = "1.306px";
+        color2_2.style.borderRadius = "1.808px";
+        color2_2.style.border = "0.904px solid #d9d9d9";
+        color2_2.style.background = "#fff";
+        firstLoad = false;
+      } else {
+        firstLoad = true;
+        colorData.style.visibility = "hidden";
+      }
+    }
+    function ySelect(){
+      document.getElementById("showColorData2").innerHTML="Yellow";
+    }
+    function bSelect(){
+      document.getElementById("showColorData2").innerHTML="Brown";
+    }
+    function wSelect(){
+      document.getElementById("showColorData1").innerHTML="White";
+    }
+    function blSelect(){
+      document.getElementById("showColorData1").innerHTML="Blue";
+    }
+    function SForData2(){
+      document.getElementById("showSizeData2").innerHTML="S";
+    }
+    function MForData2(){
+      document.getElementById("showSizeData2").innerHTML="M";
+    }
+    function LForData2(){
+      document.getElementById("showSizeData2").innerHTML="L";
+    }
+    function SForData1(){
+      document.getElementById("showSizeData1").innerHTML="S";
+    }
+    function MForData1(){
+      document.getElementById("showSizeData1").innerHTML="M";
+    }
+    function LForData1(){
+      document.getElementById("showSizeData1").innerHTML="L";
+    }
+  </script>
+</html>
